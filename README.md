@@ -3,7 +3,7 @@
 
 
 ## Demo
-<a href="http://underground0930.github.io/demo/inertial-scroll/" target="_blank">demo</a>
+<a href="http://underground0930.github.io/jquery-inertiaScroll/" target="_blank">demo</a>
 
 ##Depends
 * jQuery 1.9.1
