@@ -1,0 +1,2 @@
+# jquery-inertiaScroll
+慣性スクロールのアニメーション用jQueryプラグイン
