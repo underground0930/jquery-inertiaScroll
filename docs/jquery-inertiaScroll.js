@@ -6,8 +6,8 @@ Copyright(c) 2016 Go Nishiduka
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
 
-Last Update: 2016-12-28
-Version:1.0.0
+Last Update: 2017-5-24
+Version:1.0.1
 */
 
 (function($){
@@ -44,7 +44,7 @@ Version:1.0.0
       this.speed = speed !== undefined ? speed : 1;
       this.margin = margin !== undefined ? margin : 0;
     }
-    ChildBox.prototype.update = function(windowOffset,offsetBottom = 0){
+    ChildBox.prototype.update = function(windowOffset,offsetBottom){
         this.offset += (windowOffset * settings.childDelta1 * Number(this.speed) - this.offset) * settings.childDelta2;
         this.elm.css({transform:'translate3d(' + 0 + ',' + ( Number(this.margin) - Number(this.offset) ) + 'px ,' + 0 +')'});        
     }
