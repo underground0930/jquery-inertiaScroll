@@ -38,11 +38,11 @@ Version:1.0.0
     // inertiaScroll　childClass
     //////////////////////////////////////////////////
 
-    var ChildBox = function(elm, offset = 0, speed = 1, margin = 0){
+    var ChildBox = function(elm, offset, speed, margin){
       this.elm = elm;
-      this.offset = offset;
-      this.speed = speed;
-      this.margin = margin;
+      this.offset = offset !== undefined ? offset : 0;
+      this.speed = speed !== undefined ? speed : 1;
+      this.margin = margin !== undefined ? margin : 0;
     }
     ChildBox.prototype.update = function(windowOffset,offsetBottom = 0){
         this.offset += (windowOffset * settings.childDelta1 * Number(this.speed) - this.offset) * settings.childDelta2;
@@ -53,7 +53,7 @@ Version:1.0.0
     // inertiaScroll　parentClass
     //////////////////////////////////////////////////
 
-    var ParentBox = function(elm, offset = 0, speed = 1.0, margin = 0){
+    var ParentBox = function(elm, offset, speed, margin){
         ChildBox.apply(this,arguments);
     }
     ParentBox.prototype = Object.create(ChildBox.prototype,{
