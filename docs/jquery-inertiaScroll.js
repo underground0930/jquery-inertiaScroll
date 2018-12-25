@@ -109,6 +109,7 @@ Version:1.1.1
         }
       },
       loop:function(){
+        $body.height($parent.height());
         this.smoothScroll();
         window.requestAnimationFrame(this.loop.bind(this));
       }
@@ -118,7 +119,6 @@ Version:1.1.1
     // Done
     //////////////////////////////////////////////////
     $(function(){
-      $body.height($parent.height());
       var boxes = new Boxes();
       boxes.init();
     });
